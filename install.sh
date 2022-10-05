@@ -1,5 +1,7 @@
 #!/bin/sh
 
+cd $(dirname "$0")  # change working directory to install parent
+
 sudo apt update
 sudo apt upgrade
 
@@ -19,3 +21,5 @@ git clone https://github.com/mes3n/varmescript varmescript
 mkdir logs
 mkdir varmescript/config
 mkdir varmescript/database
+
+(sudo crontab -l ; echo "@reboot sh $(pwd)/run.sh > $(pwd)/logs/varmepump.log 2>&1") | sudo crontab
