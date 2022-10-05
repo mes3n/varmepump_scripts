@@ -23,3 +23,4 @@ mkdir varmescript/config
 mkdir varmescript/database
 
 (sudo crontab -l ; echo "@reboot sh $(pwd)/run.sh > $(pwd)/logs/varmepump.log 2>&1") | sudo crontab
+echo "Set up crontab for launching server on pi start."
