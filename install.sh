@@ -2,10 +2,10 @@
 
 cd $(dirname "$0")  # change working directory to install parent
 
-sudo apt update
-sudo apt upgrade
+sudo apt -y update
+sudo apt -y upgrade
 
-sudo apt install git
+sudo apt -y install git
 
 sudo pip install pyTibber
 
