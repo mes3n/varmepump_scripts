@@ -3,12 +3,6 @@
 
 cd $(dirname "$0")  # set working directory to parent of run.sh
 
-# !! Should probably be controlled from server
-# cd varmescript
-# .venv/bin/python main.py &
-# scriptPID=$!
-# cd ..
-
 cd varmeweb
 python main.py &
 webPID=$!
@@ -20,7 +14,7 @@ safe_exit () {
 
     echo "Stopping server with pid=$webPID."
 
-    kill $webPID || echo "$webPID is not running"
+    kill $webPID || echo "$webPID cant be found."
 
     exit 0
 
