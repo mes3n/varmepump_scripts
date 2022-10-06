@@ -31,6 +31,7 @@ echo "{
 python setup_husdata_csv.py 192.168.1.194
 
 echo "{
+    \"script_dir\": \"$(realpath varmescript)\",
     \"script_config\": \"$(realpath varmescript/config/config.json)\",
     \"script_parameters\": \"$(realpath varmescript/config/parameters.json)\",
     \"script_database\": \"$(realpath varmescript/database/husdata.csv)\"
