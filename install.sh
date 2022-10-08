@@ -28,7 +28,7 @@ echo "{
     \"mid_high\": 2.0
 }" > varmescript/config/config.json
 
-python setup_husdata_csv.py 192.168.1.194
+python setup_husdata_csv.py 192.168.1.194 || touch varmescript/database/husdata.csv
 
 echo "{
     \"script_dir\": \"$(realpath varmescript)\",
