@@ -17,7 +17,9 @@ mkdir $script_dir
 git clone https://github.com/mes3n/varmescript $script_dir
 sudo pip install -r $script_dir/requirements.txt
 
-ln -s $script_dir $server_dir/$script_dir
+cd $server_dir
+ln -s ../$script_dir varmescript
+cd ..
 
 mkdir logs
 touch logs/varmepump.log
