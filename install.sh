@@ -19,7 +19,7 @@ sudo pip install -r $script_dir/requirements.txt
 
 cd $server_dir
 ln -s ../$script_dir varmescript
-cd $(dirname "$0")
+cd ..
 
 mkdir logs
 touch logs/varmepump.log
