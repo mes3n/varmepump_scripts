@@ -3,7 +3,7 @@
 
 cd $(dirname "$0")  # set working directory to parent of run.sh
 
-cd varmeweb
+cd varmeserver
 python main.py &
 webPID=$!
 cd ..
